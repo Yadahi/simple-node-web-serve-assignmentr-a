@@ -27,13 +27,13 @@ const requestHandler = (req, res) => {
       console.log(message);
       res.statusCode = 302;
       res.setHeader("Location", "/");
-      return res.end();
+      res.end();
     });
   }
   if (url === "/users") {
     res.setHeader("Content-Type", "text/html");
     res.write("<html>");
-    res.write("<ul><li>User 1</li></ul>");
+    res.write("<ul><li>User 1</li><li>User 2</li></ul>");
     res.write("</html>");
     return res.end();
   }

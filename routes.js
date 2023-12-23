@@ -37,6 +37,12 @@ const requestHandler = (req, res) => {
     res.write("</html>");
     return res.end();
   }
+
+  res.setHeader("Content-Type", "text/html");
+  res.write("<html>");
+  res.write("<h1>Page not found</h1>");
+  res.write("</html>");
+  res.end();
 };
 
 module.exports = requestHandler;
